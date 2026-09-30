@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 function Hero() {
+    const baseUrl = import.meta.env.BASE_URL;
     return (
         <section className="hero" id="home">
 
@@ -27,7 +28,7 @@ function Hero() {
             <div className="booking-wrapper">
 
                 <img
-                    src="./images/boy-standing.png"
+                    src={baseUrl + "images/boy-standing.png"}
                     className="cartoon-boy"
                     alt="Skip Bin Service"
                 />
