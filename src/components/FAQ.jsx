@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 function FAQ() {
+    const baseUrl = import.meta.env.BASE_URL;
     const [openFAQ, setOpenFAQ] = useState(0);
 
     const faqs = [
@@ -64,7 +65,7 @@ function FAQ() {
 
                 <div className="faq-image">
                     <img
-                        src="./images/faq.png"
+                        src={baseUrl + "images/faq.png"}
                         alt="Frequently Asked Questions"
                     />
                 </div>
