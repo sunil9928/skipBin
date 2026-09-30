@@ -6182,3 +6182,54 @@ textarea {
         animation: none;
     }
 }
+
+
+/* =========================================================
+   BOOKING STEPS — REMOVE HORIZONTAL SCROLLBAR / BOTTOM LINE
+   Desktop keeps all 7 steps on one row; smaller screens can scroll.
+========================================================= */
+
+@media (min-width: 1101px) {
+    .booking-steps {
+        display: grid;
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+        gap: 0;
+        width: min(1200px, 100%);
+        max-width: 1200px;
+        overflow: visible;
+        overflow-x: visible;
+        padding-bottom: 0;
+        scrollbar-width: none;
+    }
+
+    .booking-steps::-webkit-scrollbar {
+        display: none;
+    }
+
+    .booking-step {
+        width: auto;
+        min-width: 0;
+        flex: none;
+    }
+
+    .booking-step strong {
+        max-width: 145px;
+    }
+
+    .booking-steps::before {
+        left: 50px;
+        right: 50px;
+    }
+}
+
+/* Keep a clean horizontal scroller on smaller screens without the
+   always-visible scrollbar line shown in the desktop screenshot. */
+@media (max-width: 1100px) {
+    .booking-steps {
+        scrollbar-width: none;
+    }
+
+    .booking-steps::-webkit-scrollbar {
+        display: none;
+    }
+}
