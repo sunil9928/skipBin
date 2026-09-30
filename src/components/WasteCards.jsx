@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 
 function WasteCards() {
+    const baseUrl = import.meta.env.BASE_URL;
     const [currentSlide, setCurrentSlide] = useState(0);
     const [transitionEnabled, setTransitionEnabled] = useState(true);
 
     const wasteTypes = [
         {
-            image: "./images/general-waste.jpg",
+            image: baseUrl + "images/general-waste.jpg",
             title: "General Waste",
             description: "Suitable for light domestic and commercial waste",
             accepted: [
@@ -24,7 +25,7 @@ function WasteCards() {
         },
 
         {
-            image: "./images/green-waste.jpg",
+            image: baseUrl + "images/green-waste.jpg",
             title: "Green Waste",
             description: "Price based STRICTLY on cleanfill only",
             accepted: [
@@ -48,7 +49,7 @@ function WasteCards() {
         },
 
         {
-            image: "./images/mixed-waste.jpg",
+            image: baseUrl + "images/mixed-waste.jpg",
             title: "Mixed Waste",
             description:
                 "Suitable for domestic, commercial, demolition, construction and renovation",
@@ -70,7 +71,7 @@ function WasteCards() {
         },
 
         {
-            image: "./images/construction-waste.jpg",
+            image: baseUrl + "images/construction-waste.jpg",
             title: "Construction Waste",
             description:
                 "Ideal for construction, renovation and demolition projects.",
