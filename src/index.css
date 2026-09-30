@@ -5793,3 +5793,91 @@ textarea {
         transition: none !important;
     }
 }
+
+
+/* =========================================================
+   STANDING BOY - PANEL ANCHORED POSITION
+   Matches the desktop reference and stays responsive.
+========================================================= */
+
+/* Desktop: boy sits on the left side of the blue booking panel
+   and overlaps the white booking card, as in the reference image. */
+@media (min-width: 1101px) {
+    .booking-panel {
+        position: relative;
+    }
+
+    .cartoon-boy {
+        position: absolute;
+        left: clamp(18px, 1.8vw, 30px);
+        right: auto;
+        bottom: clamp(6px, 0.8vw, 12px);
+        top: auto;
+        width: clamp(175px, 11.5vw, 210px);
+        max-width: none;
+        height: auto;
+        z-index: 8;
+        pointer-events: none;
+        object-fit: contain;
+        transform: none;
+    }
+}
+
+/* Laptop / tablet landscape. */
+@media (min-width: 801px) and (max-width: 1100px) {
+    .booking-panel {
+        position: relative;
+    }
+
+    .cartoon-boy {
+        position: absolute;
+        left: 14px;
+        right: auto;
+        bottom: 8px;
+        top: auto;
+        width: clamp(138px, 15vw, 165px);
+        max-width: none;
+        height: auto;
+        z-index: 8;
+        pointer-events: none;
+        transform: none;
+    }
+}
+
+/* Phones: keep the boy centered above the panel so it does not cover
+   the form controls, while the size adapts to the device width. */
+@media (max-width: 800px) {
+    .booking-panel {
+        position: relative;
+        overflow: visible;
+    }
+
+    .cartoon-boy {
+        position: absolute;
+        left: 50%;
+        right: auto;
+        bottom: auto;
+        top: clamp(-96px, -18vw, -76px);
+        width: clamp(96px, 25vw, 125px);
+        max-width: none;
+        height: auto;
+        z-index: 8;
+        pointer-events: none;
+        transform: translateX(-50%);
+        animation: cartoonBobCentered 4.5s ease-in-out infinite;
+    }
+}
+
+@media (max-width: 480px) {
+    .cartoon-boy {
+        top: -78px;
+        width: 102px;
+    }
+}
+
+@media (max-width: 360px) {
+    .cartoon-boy {
+        top: -72px;
+        width: 92px;
+    }
+}
