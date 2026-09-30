@@ -5,27 +5,27 @@ function SkipCards() {
 
     const skips = [
          {
-            image: "/images/slider1.jpg",
+            image: "./images/slider1.jpg",
             title: "3 Cubic Metre Skip Bin",
             text: "Ideal for medium-sized jobs. Our 3m³ skip suits garage clean-outs, small landscaping projects, and single-room renovations, with enough capacity for bulky household items."
         },
         {
-            image: "/images/slider2.jpg",
+            image: "./images/slider2.jpg",
             title: "4 Cubic Metre Skip Bin",
             text: "A popular all-rounder. Our 4m³ skip is great for larger home clean-ups, kitchen or bathroom strip-outs, and general household or garden waste in bigger volumes."
         },
         {
-            image: "/images/slider3.jpg",
+            image: "./images/slider3.jpg",
             title: "6 Cubic Metre Skip Bin",
             text: "Built for bigger projects. Our 6m³ skip is well suited to full house clean-outs, small renovations, and light construction or demolition waste."
         },
         {
-            image: "/images/slider4.jpg",
+            image: "./images/slider4.jpg",
             title: "9 Cubic Metre Skip Bin",
             text: "Our largest option for major jobs. The 9m³ skip handles large-scale renovations, construction and demolition debris, and commercial clean-ups with ease."
         },
         {
-            image: "/images/slider5.jpg",
+            image: "./images/slider5.jpg",
             title: "12 Cubic Metre Skip Bin",
             text: "Designed for large-scale projects, our 12m³ skip bin is ideal for major renovations, construction work, demolition waste, and large commercial clean-ups where extra capacity is required."
         }
