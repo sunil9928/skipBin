@@ -32,7 +32,7 @@ function AboutUs() {
 
             <div className="about-us-image">
                 <img
-                    src="/images/skip-bin.jpg"
+                    src="./images/skip-bin.jpg"
                     alt="Skip bins"
                 />
             </div>
