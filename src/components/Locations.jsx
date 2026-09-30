@@ -1,6 +1,6 @@
 function Locations() {
     return (
-        <section className="locations">
+        <section id="contact" className="locations">
 
             <div className="locations-content">
 
