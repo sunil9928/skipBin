@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 
 function BookBanner(){
+    const baseUrl = import.meta.env.BASE_URL;
     return(
         <section className="book-banner">
             <div className="book-banner-image">
-                <img src="./images/book-section.png" alt="Book Your skip Bin" />
+                <img src={baseUrl + "images/book-section.png"} alt="Book Your skip Bin" />
             </div>
             <div className="book-banner-content">
                 <div className="book-banner-label">
