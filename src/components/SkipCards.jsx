@@ -1,7 +1,37 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 function SkipCards() {
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [slideWidth, setSlideWidth] = useState(0);
+    const sliderRef = useRef(null);
+
+    useEffect(() => {
+        const updateSlideWidth = () => {
+            const slider = sliderRef.current;
+            const card = slider?.querySelector(".skip-card");
+            const track = slider?.querySelector(".skip-slider-track");
+
+            if (!card || !track) {
+                return;
+            }
+
+            const gap = parseFloat(getComputedStyle(track).gap) || 0;
+            setSlideWidth(card.getBoundingClientRect().width + gap);
+        };
+
+        updateSlideWidth();
+        window.addEventListener("resize", updateSlideWidth);
+
+        const resizeObserver = new ResizeObserver(updateSlideWidth);
+        if (sliderRef.current) {
+            resizeObserver.observe(sliderRef.current);
+        }
+
+        return () => {
+            window.removeEventListener("resize", updateSlideWidth);
+            resizeObserver.disconnect();
+        };
+    }, []);
 
     const skips = [
          {
@@ -32,19 +62,19 @@ function SkipCards() {
     ];
 
     const nextSlide = () => {
-        setCurrentSlide((currentSlide + 1) % skips.length);
+        setCurrentSlide((prev) => (prev + 1) % skips.length);
     };
 
     const previousSlide = () => {
         setCurrentSlide(
-            (currentSlide - 1 + skips.length) % skips.length
+            (prev) => (prev - 1 + skips.length) % skips.length
         );
     };
 
     return (
         <section className="skip-cards-section">
 
-            <div className="skip-slider">
+            <div className="skip-slider" ref={sliderRef}>
 
                 <button
                     className="slider-arrow prev"
@@ -56,7 +86,7 @@ function SkipCards() {
                 <div
     className="skip-slider-track"
     style={{
-        transform: `translateX(-${currentSlide * 351}px)`
+        transform: `translate3d(-${currentSlide * slideWidth}px, 0, 0)`
     }}
 >
                     {skips.map((skip, index) => (
