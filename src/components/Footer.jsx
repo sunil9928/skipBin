@@ -1,6 +1,7 @@
 function Footer() {
+    const baseUrl = import.meta.env.BASE_URL;
     return (
-        <footer id="contact" className="footer">
+        <footer id="footer" className="footer">
 
             <div className="footer-main">
 
@@ -8,7 +9,7 @@ function Footer() {
                 <div className="footer-brand">
 
                     <img
-                        src="./images/logo.png"
+                        src={baseUrl + "images/logo.png"}
                         alt="SkipBin Hire"
                     />
 
@@ -39,17 +40,17 @@ function Footer() {
                     <div className="footer-links-grid">
 
                         <div>
-                            <a href="#home">Home</a>
-                            <a href="#area-served">Area Served</a>
-                            <a href="#waste-types">Waste Types</a>
-                            <a href="#faqs">FAQ's</a>
+                            <a href={baseUrl + "#home"}>Home</a>
+                            <a href={baseUrl + "#area-served"}>Area Served</a>
+                            <a href={baseUrl + "#waste-types"}>Waste Types</a>
+                            <a href={baseUrl + "#faqs"}>FAQ's</a>
                         </div>
 
                         <div>
-                            <a href="#about">About</a>
-                            <a href="#skip-sizes">Skip Sizes</a>
-                            <a href="#blogs">Blogs</a>
-                            <a href="#contact">Contact Us</a>
+                            <a href={baseUrl + "#about"}>About</a>
+                            <a href={baseUrl + "#skip-sizes"}>Skip Sizes</a>
+                            <a href={baseUrl + "#blogs"}>Blogs</a>
+                            <a href={baseUrl + "#contact"}>Contact Us</a>
                         </div>
 
                     </div>
