@@ -1,4 +1,5 @@
 function WhyChooseUs() {
+    const baseUrl = import.meta.env.BASE_URL;
     return (
         <section className="why-choose-us">
             <div className="why-choose-us-content">
@@ -19,7 +20,7 @@ function WhyChooseUs() {
 
             <div className="why-choose-us-image">
                 <img
-                    src="./images/skip-bin1.png"
+                    src={baseUrl + "images/skip-bin1.png"}
                     alt="Skip bins"
                 />
             </div>
