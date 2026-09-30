@@ -1,4 +1,5 @@
 function AboutUs() {
+    const baseUrl = import.meta.env.BASE_URL;
     return (
         <section id="about" className="about-us">
             <div className="about-us-content">
@@ -32,7 +33,7 @@ function AboutUs() {
 
             <div className="about-us-image">
                 <img
-                    src="./images/skip-bin.jpg"
+                    src={baseUrl + "images/skip-bin.jpg"}
                     alt="Skip bins"
                 />
             </div>
