@@ -1,19 +1,19 @@
 function Blog() {
     const blogs = [
         {
-            image: "/images/blog1.jpg",
+            image: "./images/blog1.jpg",
             title: "Skip Bin Hire in Blackwood: Pricing, Availability & Delivery Guide",
             description:
                 "Looking for skip bin hire in Blackwood? This guide covers pricing, delivery options, availability, accepted waste types, and tips for choosing the right skip bin..."
         },
         {
-            image: "/images/blog2.jpg",
+            image: "./images/blog2.jpg",
             title: "How to Hire a Skip Bin: A Step-by-Step Guide for Beginners",
             description:
                 "Planning a cleanup, renovation, or construction project? This first-time skip bin hire guide explains bin sizes, waste types, permits, costs..."
         },
         {
-            image: "/images/blog3.jpg",
+            image: "./images/blog3.jpg",
             title: "End-of-Lease Clean-Up in Adelaide: How to Use a Skip Bin",
             description:
                 "Moving out? Learn how hiring a skip bin in Adelaide can simplify end-of-lease rubbish removal, reduce stress, and help you leave your property clean..."
