@@ -30,7 +30,7 @@ function Hero() {
                 <div className="booking-panel">
 
                     <img
-                        src={baseUrl + "images/boy-standing-reference.webp"}
+                        src={baseUrl + "images/boy-standing.png"}
                         className="cartoon-boy"
                         alt="Skip Bin Service"
                     />
