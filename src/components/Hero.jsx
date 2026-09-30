@@ -27,7 +27,7 @@ function Hero() {
             <div className="booking-wrapper">
 
                 <img
-                    src="/images/boy-standing.png"
+                    src="./images/boy-standing.png"
                     className="cartoon-boy"
                     alt="Skip Bin Service"
                 />
