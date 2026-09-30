@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function BookBanner(){
     return(
         <section className="book-banner">
@@ -17,7 +19,7 @@ function BookBanner(){
                     waste sorted. Fast delivery, easy booking and reliable
                     service.</p>
                     <div className="book-banner-buttons">
-                        <button className="book-now-btn">Book Now</button>
+                        <Link to="/booking" className="book-now-btn">Book Now</Link>
                         <button className="quote-btn">Get a Quote</button>
                     </div>
             </div>
