@@ -8,7 +8,7 @@ function Footer() {
                 <div className="footer-brand">
 
                     <img
-                        src="/images/logo.png"
+                        src="./images/logo.png"
                         alt="SkipBin Hire"
                     />
 
