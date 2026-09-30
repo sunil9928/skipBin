@@ -27,13 +27,13 @@ function Hero() {
 
             <div className="booking-wrapper">
 
-                <img
-                    src={baseUrl + "images/boy-standing.png"}
-                    className="cartoon-boy"
-                    alt="Skip Bin Service"
-                />
-
                 <div className="booking-panel">
+
+                    <img
+                        src={baseUrl + "images/boy-standing.png"}
+                        className="cartoon-boy"
+                        alt="Skip Bin Service"
+                    />
 
                     <h2>Book Your Bin in 4 Easy Steps</h2>
 
