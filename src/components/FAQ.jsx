@@ -64,7 +64,7 @@ function FAQ() {
 
                 <div className="faq-image">
                     <img
-                        src="/images/faq.png"
+                        src="./images/faq.png"
                         alt="Frequently Asked Questions"
                     />
                 </div>
