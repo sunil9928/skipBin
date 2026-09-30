@@ -2,7 +2,7 @@ function BookBanner(){
     return(
         <section className="book-banner">
             <div className="book-banner-image">
-                <img src="/images/book-section.png" alt="Book Your skip Bin" />
+                <img src="./images/book-section.png" alt="Book Your skip Bin" />
             </div>
             <div className="book-banner-content">
                 <div className="book-banner-label">
