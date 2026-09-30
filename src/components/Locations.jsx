@@ -21,7 +21,7 @@ function Locations() {
             <div className="location-card">
 
                 <img
-                    src="/images/australia.jpg"
+                    src="./images/australia.jpg"
                     alt="Adelaide"
                 />
 
