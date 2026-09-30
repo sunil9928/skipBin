@@ -5884,52 +5884,48 @@ textarea {
 
 
 /* =========================================================
-   FINAL STANDING BOY + BOOKING PANEL POSITION
-   Reference-matched desktop layout with device-aware scaling.
+   REFERENCE-MATCHED STANDING BOY
+   Keep the boy anchored to the booking panel, matching the
+   supplied reference composition on desktop and staying usable
+   on smaller screens.
 ========================================================= */
 
-/* Keep the booking panel styling/animation as requested. */
 .booking-panel {
     position: relative;
-    width: 620px;
-    min-height: 600px;
-    border-radius: 35px;
-    padding: 20px 30px 30px 110px;
-    background: linear-gradient(135deg, #65d3ff, #139fe4);
     overflow: visible;
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.30);
-    transform-style: preserve-3d;
-    animation:
-        bookingIn 1s 0.15s cubic-bezier(.2, .8, .2, 1) both,
-        bookingFloat 6s 1.25s ease-in-out infinite;
 }
 
-/* Desktop reference:
-   boy is anchored to the lower-left of the blue panel and overlaps
-   the left edge of the white booking card. */
+.booking-box {
+    position: relative;
+    z-index: 5;
+}
+
+.cartoon-boy {
+    object-fit: contain;
+    pointer-events: none;
+}
+
+/* Desktop — reference composition */
 @media (min-width: 1101px) {
     .booking-panel {
         width: min(620px, 100%);
+        min-height: 600px;
+        padding: 20px 30px 30px 110px;
+        overflow: visible;
     }
 
     .cartoon-boy {
         position: absolute;
-        left: 22px;
+        left: 20px;
         right: auto;
-        bottom: 12px;
         top: auto;
+        bottom: 8px;
         width: 195px;
         max-width: none;
         height: auto;
         z-index: 20;
         transform: none;
         animation: none !important;
-        pointer-events: none;
-    }
-
-    .booking-box {
-        position: relative;
-        z-index: 5;
     }
 }
 
@@ -5939,61 +5935,51 @@ textarea {
         width: min(500px, 100%);
         min-height: 560px;
         padding-left: 92px;
-    }
-
-    .cartoon-boy {
-        position: absolute;
-        left: 12px;
-        right: auto;
-        bottom: 10px;
-        top: auto;
-        width: clamp(130px, 14vw, 150px);
-        max-width: none;
-        height: auto;
-        z-index: 20;
-        transform: none;
-        animation: none !important;
-        pointer-events: none;
-    }
-
-    .booking-box {
-        position: relative;
-        z-index: 5;
-    }
-}
-
-/* Phone:
-   preserve the same left-side composition, but create a little breathing
-   room for the boy so form controls are not blocked. */
-@media (max-width: 800px) {
-    .booking-panel {
-        width: 100%;
-        max-width: 520px;
-        min-height: 0;
-        padding: 24px 18px 24px;
         overflow: visible;
     }
 
     .cartoon-boy {
         position: absolute;
-        left: 7px;
+        left: 10px;
         right: auto;
-        bottom: 10px;
         top: auto;
-        width: clamp(82px, 23vw, 105px);
+        bottom: 8px;
+        width: clamp(135px, 14vw, 155px);
         max-width: none;
         height: auto;
         z-index: 20;
         transform: none;
         animation: none !important;
-        pointer-events: none;
+    }
+}
+
+/* Phones — preserve the same standing/overlapping composition */
+@media (max-width: 800px) {
+    .booking-panel {
+        width: 100%;
+        max-width: 520px;
+        min-height: 0;
+        padding: 24px 18px;
+        overflow: visible;
+    }
+
+    .cartoon-boy {
+        position: absolute;
+        left: 4px;
+        right: auto;
+        top: auto;
+        bottom: 8px;
+        width: clamp(78px, 24vw, 110px);
+        max-width: none;
+        height: auto;
+        z-index: 20;
+        transform: none;
+        animation: none !important;
     }
 
     .booking-box {
-        position: relative;
-        z-index: 5;
-        width: calc(100% - 36px);
-        margin-left: 36px;
+        width: calc(100% - 40px);
+        margin-left: 40px;
     }
 }
 
@@ -6005,9 +5991,9 @@ textarea {
     }
 
     .cartoon-boy {
-        left: 5px;
-        bottom: 8px;
-        width: 86px;
+        left: 2px;
+        bottom: 6px;
+        width: clamp(72px, 25vw, 92px);
     }
 
     .booking-box {
@@ -6018,17 +6004,16 @@ textarea {
 
 @media (max-width: 360px) {
     .cartoon-boy {
-        left: 4px;
-        bottom: 7px;
+        left: 2px;
+        bottom: 5px;
         width: 78px;
     }
 
     .booking-box {
-        width: calc(100% - 25px);
-        margin-left: 25px;
+        width: calc(100% - 26px);
+        margin-left: 26px;
     }
 }
-
 
 /* ---------- BOOK NOW LINK BUTTON FIX ---------- */
 /* Book Now is a React Router <Link>, so reset anchor defaults and
