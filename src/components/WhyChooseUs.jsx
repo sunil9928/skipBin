@@ -19,7 +19,7 @@ function WhyChooseUs() {
 
             <div className="why-choose-us-image">
                 <img
-                    src="/images/skip-bin1.png"
+                    src="./images/skip-bin1.png"
                     alt="Skip bins"
                 />
             </div>
