@@ -6233,3 +6233,63 @@ textarea {
         display: none;
     }
 }
+
+
+/* =========================================================
+   FINAL FIX — BOOKING STEPS SCROLLBAR
+   The gray bar with arrows is the horizontal scrollbar.
+   Desktop: no scrolling, all 7 steps fit in one row.
+========================================================= */
+
+@media (min-width: 768px) {
+    .booking-steps {
+        display: grid !important;
+        grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+        width: 100% !important;
+        max-width: 1200px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        column-gap: 0 !important;
+
+        overflow-x: hidden !important;
+        overflow-y: visible !important;
+
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
+    }
+
+    .booking-steps::-webkit-scrollbar {
+        width: 0 !important;
+        height: 0 !important;
+        display: none !important;
+    }
+
+    .booking-step {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        flex: none !important;
+    }
+
+    .booking-step strong,
+    .booking-step p {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        white-space: normal;
+    }
+}
+
+/* Mobile/tablet: scrolling is still allowed when the 7 steps
+   cannot fit, but the visible browser scrollbar is removed. */
+@media (max-width: 767px) {
+    .booking-steps {
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
+    }
+
+    .booking-steps::-webkit-scrollbar {
+        width: 0 !important;
+        height: 0 !important;
+        display: none !important;
+    }
+}
