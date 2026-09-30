@@ -6028,3 +6028,19 @@ textarea {
         margin-left: 25px;
     }
 }
+
+
+/* ---------- BOOK NOW LINK BUTTON FIX ---------- */
+/* Book Now is a React Router <Link>, so reset anchor defaults and
+   center the text exactly like a real button. */
+.book-now-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none !important;
+    line-height: 1;
+    white-space: nowrap;
+    box-sizing: border-box;
+    color: #ffffff;
+}
