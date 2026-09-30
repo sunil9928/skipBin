@@ -1,4 +1,5 @@
 function Locations() {
+    const baseUrl = import.meta.env.BASE_URL;
     return (
         <section id="contact" className="locations">
 
@@ -21,7 +22,7 @@ function Locations() {
             <div className="location-card">
 
                 <img
-                    src="./images/australia.jpg"
+                    src={baseUrl + "images/australia.jpg"}
                     alt="Adelaide"
                 />
 
